@@ -3,10 +3,9 @@
 	<script>
   function startChat() {
 	setInterval(() => {
-		console.log('here');
-		if( embedded_svc && embedded_svc.liveagentAPI){
+		if( embedded_svc && embedded_svc.liveAgentAPI){
 			console.log('Live Agent loaded!')
-		embedded_svc.liveagentAPI.startChat({
+		embedded_svc.liveAgentAPI.startChat({
 		      directToAgentRouting: {
 			buttonId: "5731L000000M5ik", 
 			fallback: true,
@@ -22,7 +21,7 @@
   }
   function clearSession() {
     console.log('Inside Close Chat')
-    embedded_svc.liveagentAPI.clearSession() ;
+    embedded_svc.liveAgentAPI.clearSession() ;
   }
 </script>
 </head>	
