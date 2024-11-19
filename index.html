@@ -3,7 +3,8 @@
 	<script>
   function startChat() {
 	setInterval({
-		if(embedded_svc.liveagentAPI){
+		console.log('here')
+		if( embedded_svc && embedded_svc.liveAgentAPI){
 			console.log('Live Agent loaded!')
 		embedded_svc.liveAgentAPI.startChat({
 		      directToAgentRouting: {
