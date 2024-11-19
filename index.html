@@ -2,15 +2,25 @@
 <head>
 	<script>
   function startChat() {
-    console.log('Open chat');
-    embedded_svc.liveAgentAPI.startChat({
-      directToAgentRouting: {
-        buttonId: "5731L000000M5ik", 
-        fallback: true,
-      },
-      extraPrechatInfo: [],
-      extraPrechatFormDetails: []
-    });
+    console.log('Open chat', embedded_svc.);
+	setInterval({
+		if(embedded_svc.liveagentAPI){
+			console.log('Live Agent loaded!')
+		embedded_svc.liveAgentAPI.startChat({
+		      directToAgentRouting: {
+			buttonId: "5731L000000M5ik", 
+			fallback: true,
+		      },
+		      extraPrechatInfo: [],
+		      extraPrechatFormDetails: []
+		    });
+		return;
+		}
+		else {
+			console.log('Live Agent not loaded!')
+		}
+	},500);
+    
   }
   function clearSession() {
     console.log('Inside Close Chat')
