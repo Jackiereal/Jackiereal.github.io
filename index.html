@@ -1,31 +1,4 @@
 <html>
-<head>
-	<script>
-  function startChat() {
-	setInterval(() => {
-		if( embedded_svc && embedded_svc.liveAgentAPI){
-			console.log('Live Agent loaded!')
-		embedded_svc.liveAgentAPI.startChat({
-		      directToAgentRouting: {
-			buttonId: "5731L000000M5ik", 
-			fallback: true,
-		      },
-		      extraPrechatInfo: [],
-		      extraPrechatFormDetails: []
-		    });
-			return;
-		} else {
-			console.log('Live Agent not loaded!')
-		}
-	},500);
-  }
-  function clearSession() {
-    console.log('Inside Close Chat')
-    embedded_svc.liveAgentAPI.clearSession() ;
-  }
-</script>
-</head>	
-<input type="button" value="start chat" onclick="startChat();" />
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
