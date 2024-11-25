@@ -17,6 +17,12 @@
  <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js' defer></script>
 <script type='text/javascript'>
  window.addEventListener('load', function() {
+
+  var startChat = function() {
+   if(window.embedded_svc) {
+    window.embedded_svc.liveAgentAPI.startChat();
+  }
+  
  var initESW = function(gslbBaseURL) {
   embedded_svc.settings.displayHelpButton = true; //Or false
   embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
@@ -68,5 +74,6 @@
 // window._laq.push(function(){liveagent.showWhenOnline('5731L000000M5ik', document.getElementById('liveagent_button_online_5731L000000M5ik'));
 // liveagent.showWhenOffline('5731L000000M5ik', document.getElementById('liveagent_button_offline_5731L000000M5ik'));
 // });</script>
+  <input type="button" onclick="startChat()"/>
  </body>
  </html>
