@@ -20,7 +20,14 @@
 
   var startChat = function() {
    if(window.embedded_svc) {
-    window.embedded_svc.liveAgentAPI.startChat();
+    window.embedded_svc.liveAgentAPI.startChat({
+      directToAgentRouting: {
+        buttonId: "5731L000000M5ik", 
+        fallback: true
+      }，
+      extraPrechatInfo: [],
+      extraPrechatFormDetails: []
+    })
   }
   
  var initESW = function(gslbBaseURL) {
