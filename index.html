@@ -1,7 +1,6 @@
 <html>
-<input type="button" value="start chat" onclick="startChat();" /><br/><br/><br/>
  <head>
-<!-- <style type='text/css'>
+<style type='text/css'>
  .embeddedServiceHelpButton .helpButton .uiButton {
   background-color: #005290;
   font-family: "Salesforce Sans", sans-serif;
@@ -14,11 +13,9 @@
   src: url('<https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff>') format('woff'),
   url('<https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf>') format('truetype');
  }
-</style> -->
- <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js' defer></script>
+</style>
+ <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js' ></script>
 <script type='text/javascript'>
- window.addEventListener('load', function() {
-  
  var initESW = function(gslbBaseURL) {
   embedded_svc.settings.displayHelpButton = true; //Or false
   embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
@@ -60,25 +57,8 @@
  } else {
   initESW('https://service.force.com');
  }
-  }, false);
 </script>
- <script>
-  function startChat() {
-    console.log('Open chat')
-    embedded_svc.liveAgentAPI.startChat({
-      directToAgentRouting: {
-        buttonId: "5731L000000M5ik", 
-        fallback: true
-      }，
-      extraPrechatInfo: [],
-      extraPrechatFormDetails: []
-    })
-  }
-  function clearSession() {
-    console.log('Inside Close Chat')
-    embedded_svc.liveAgentAPI.clearSession() ;
-  }
-</script>
+ 
  </head>
  <body>
 <a id="liveagent_button_online_5731L000000M5ik" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('5731L000000M5ik')"><!-- Online Chat Content --></a><div id="liveagent_button_offline_5731L000000M5ik" style="display: none;"><!-- Offline Chat Content --></div>
